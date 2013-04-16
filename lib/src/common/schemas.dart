@@ -3,19 +3,19 @@ part of latitude_v1_api_client;
 class LatitudeCurrentlocationResourceJson {
 
   /** Create new LatitudeCurrentlocationResourceJson from JSON data */
-  LatitudeCurrentlocationResourceJson.fromJson(Map json) {
+  LatitudeCurrentlocationResourceJson.fromJson(core.Map json) {
   }
 
   /** Create JSON Object for LatitudeCurrentlocationResourceJson */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
 
     return output;
   }
 
   /** Return String representation of LatitudeCurrentlocationResourceJson */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
@@ -23,18 +23,18 @@ class LatitudeCurrentlocationResourceJson {
 class Location {
 
   /** Kind of this item. */
-  String kind;
+  core.String kind;
 
   /** Create new Location from JSON data */
-  Location.fromJson(Map json) {
+  Location.fromJson(core.Map json) {
     if (json.containsKey("kind")) {
       kind = json["kind"];
     }
   }
 
   /** Create JSON Object for Location */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (kind != null) {
       output["kind"] = kind;
@@ -44,16 +44,16 @@ class Location {
   }
 
   /** Return String representation of Location */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 
 class LocationFeed {
-  List<Location> items;
-  String kind;
+  core.List<Location> items;
+  core.String kind;
 
   /** Create new LocationFeed from JSON data */
-  LocationFeed.fromJson(Map json) {
+  LocationFeed.fromJson(core.Map json) {
     if (json.containsKey("items")) {
       items = [];
       json["items"].forEach((item) {
@@ -66,11 +66,11 @@ class LocationFeed {
   }
 
   /** Create JSON Object for LocationFeed */
-  Map toJson() {
-    var output = new Map();
+  core.Map toJson() {
+    var output = new core.Map();
 
     if (items != null) {
-      output["items"] = new List();
+      output["items"] = new core.List();
       items.forEach((item) {
         output["items"].add(item.toJson());
       });
@@ -83,7 +83,7 @@ class LocationFeed {
   }
 
   /** Return String representation of LocationFeed */
-  String toString() => JSON.stringify(this.toJson());
+  core.String toString() => JSON.stringify(this.toJson());
 
 }
 

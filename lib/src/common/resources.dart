@@ -10,13 +10,13 @@ class CurrentLocationResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> delete({Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> delete({core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "currentLocation";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (optParams != null) {
       optParams.forEach((key, value) {
         if (value != null && queryParams[key] == null) {
@@ -49,13 +49,13 @@ class CurrentLocationResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<LatitudeCurrentlocationResourceJson> get({String granularity, Map optParams}) {
-    var completer = new Completer();
+  async.Future<LatitudeCurrentlocationResourceJson> get({core.String granularity, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "currentLocation";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (granularity != null && !["best", "city"].contains(granularity)) {
       paramErrors.add("Allowed values for granularity: best, city");
     }
@@ -88,13 +88,13 @@ class CurrentLocationResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<LatitudeCurrentlocationResourceJson> insert(LatitudeCurrentlocationResourceJson request, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<LatitudeCurrentlocationResourceJson> insert(LatitudeCurrentlocationResourceJson request, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "currentLocation";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (optParams != null) {
       optParams.forEach((key, value) {
         if (value != null && queryParams[key] == null) {
@@ -129,13 +129,13 @@ class LocationResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Map> delete(String locationId, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<core.Map> delete(core.String locationId, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "location/{locationId}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (locationId == null) paramErrors.add("locationId is required");
     if (locationId != null) urlParams["locationId"] = locationId;
     if (optParams != null) {
@@ -172,13 +172,13 @@ class LocationResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Location> get(String locationId, {String granularity, Map optParams}) {
-    var completer = new Completer();
+  async.Future<Location> get(core.String locationId, {core.String granularity, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "location/{locationId}";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (granularity != null && !["best", "city"].contains(granularity)) {
       paramErrors.add("Allowed values for granularity: best, city");
     }
@@ -213,13 +213,13 @@ class LocationResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<Location> insert(Location request, {Map optParams}) {
-    var completer = new Completer();
+  async.Future<Location> insert(Location request, {core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "location";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (optParams != null) {
       optParams.forEach((key, value) {
         if (value != null && queryParams[key] == null) {
@@ -258,13 +258,13 @@ class LocationResource extends Resource {
    *
    * [optParams] - Additional query parameters
    */
-  Future<LocationFeed> list({String granularity, String max_results, String max_time, String min_time, Map optParams}) {
-    var completer = new Completer();
+  async.Future<LocationFeed> list({core.String granularity, core.String max_results, core.String max_time, core.String min_time, core.Map optParams}) {
+    var completer = new async.Completer();
     var url = "location";
-    var urlParams = new Map();
-    var queryParams = new Map();
+    var urlParams = new core.Map();
+    var queryParams = new core.Map();
 
-    var paramErrors = new List();
+    var paramErrors = new core.List();
     if (granularity != null && !["best", "city"].contains(granularity)) {
       paramErrors.add("Allowed values for granularity: best, city");
     }

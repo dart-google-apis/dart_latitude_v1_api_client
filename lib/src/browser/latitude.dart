@@ -4,10 +4,10 @@ part of latitude_v1_api_browser;
 /** Lets you read and update your current location and work with your location history */
 class Latitude extends BrowserClient {
 
-  CurrentLocationResource _currentLocation;
-  CurrentLocationResource get currentLocation => _currentLocation;
-  LocationResource _location;
-  LocationResource get location => _location;
+  CurrentLocationResource_ _currentLocation;
+  CurrentLocationResource_ get currentLocation => _currentLocation;
+  LocationResource_ _location;
+  LocationResource_ get location => _location;
 
   /** OAuth Scope2: Manage your best-available location and location history */
   static const core.String LATITUDE_ALL_BEST_SCOPE = "https://www.googleapis.com/auth/latitude.all.best";
@@ -73,7 +73,7 @@ class Latitude extends BrowserClient {
   Latitude([oauth.OAuth2 auth]) : super(auth) {
     basePath = "/latitude/v1/";
     rootUrl = "https://www.googleapis.com:443/";
-    _currentLocation = new CurrentLocationResource(this);
-    _location = new LocationResource(this);
+    _currentLocation = new CurrentLocationResource_(this);
+    _location = new LocationResource_(this);
   }
 }

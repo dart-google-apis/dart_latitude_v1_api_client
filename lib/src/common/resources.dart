@@ -1,8 +1,8 @@
 part of latitude_v1_api_client;
 
-class CurrentLocationResource extends Resource {
+class CurrentLocationResource_ extends Resource {
 
-  CurrentLocationResource(Client client) : super(client) {
+  CurrentLocationResource_(Client client) : super(client) {
   }
 
   /**
@@ -26,7 +26,7 @@ class CurrentLocationResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -69,7 +69,7 @@ class CurrentLocationResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -104,7 +104,7 @@ class CurrentLocationResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -117,9 +117,9 @@ class CurrentLocationResource extends Resource {
   }
 }
 
-class LocationResource extends Resource {
+class LocationResource_ extends Resource {
 
-  LocationResource(Client client) : super(client) {
+  LocationResource_(Client client) : super(client) {
   }
 
   /**
@@ -147,7 +147,7 @@ class LocationResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -194,7 +194,7 @@ class LocationResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -229,7 +229,7 @@ class LocationResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 
@@ -281,7 +281,7 @@ class LocationResource extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new ArgumentError(paramErrors.join(" / ")));
+      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
       return completer.future;
     }
 

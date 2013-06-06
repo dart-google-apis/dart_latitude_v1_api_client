@@ -72,7 +72,7 @@ class Latitude extends BrowserClient {
 
   Latitude([oauth.OAuth2 auth]) : super(auth) {
     basePath = "/latitude/v1/";
-    rootUrl = "https://www.googleapis.com:443/";
+    rootUrl = "https://www.googleapis.com/";
     _currentLocation = new CurrentLocationResource_(this);
     _location = new LocationResource_(this);
   }

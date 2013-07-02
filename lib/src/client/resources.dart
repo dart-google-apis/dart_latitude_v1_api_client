@@ -11,7 +11,6 @@ class CurrentLocationResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<core.Map> delete({core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "currentLocation";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -26,16 +25,12 @@ class CurrentLocationResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "DELETE", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(data))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response;
   }
 
   /**
@@ -50,7 +45,6 @@ class CurrentLocationResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<LatitudeCurrentlocationResourceJson> get({core.String granularity, core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "currentLocation";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -69,16 +63,13 @@ class CurrentLocationResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new LatitudeCurrentlocationResourceJson.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new LatitudeCurrentlocationResourceJson.fromJson(data));
   }
 
   /**
@@ -89,7 +80,6 @@ class CurrentLocationResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<LatitudeCurrentlocationResourceJson> insert(LatitudeCurrentlocationResourceJson request, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "currentLocation";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -104,16 +94,13 @@ class CurrentLocationResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "POST", body: request.toString(), urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new LatitudeCurrentlocationResourceJson.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new LatitudeCurrentlocationResourceJson.fromJson(data));
   }
 }
 
@@ -130,7 +117,6 @@ class LocationResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<core.Map> delete(core.String locationId, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "location/{locationId}";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -147,16 +133,12 @@ class LocationResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "DELETE", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(data))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response;
   }
 
   /**
@@ -173,7 +155,6 @@ class LocationResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<Location> get(core.String locationId, {core.String granularity, core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "location/{locationId}";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -194,16 +175,13 @@ class LocationResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new Location.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new Location.fromJson(data));
   }
 
   /**
@@ -214,7 +192,6 @@ class LocationResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<Location> insert(Location request, {core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "location";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -229,16 +206,13 @@ class LocationResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "POST", body: request.toString(), urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new Location.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new Location.fromJson(data));
   }
 
   /**
@@ -259,7 +233,6 @@ class LocationResource_ extends Resource {
    * [optParams] - Additional query parameters
    */
   async.Future<LocationFeed> list({core.String granularity, core.String max_results, core.String max_time, core.String min_time, core.Map optParams}) {
-    var completer = new async.Completer();
     var url = "location";
     var urlParams = new core.Map();
     var queryParams = new core.Map();
@@ -281,16 +254,13 @@ class LocationResource_ extends Resource {
     }
 
     if (!paramErrors.isEmpty) {
-      completer.completeError(new core.ArgumentError(paramErrors.join(" / ")));
-      return completer.future;
+      throw new core.ArgumentError(paramErrors.join(" / "));
     }
 
     var response;
     response = _client.request(url, "GET", urlParams: urlParams, queryParams: queryParams);
-    response
-      .then((data) => completer.complete(new LocationFeed.fromJson(data)))
-      .catchError((e) { completer.completeError(e); return true; });
-    return completer.future;
+    return response
+      .then((data) => new LocationFeed.fromJson(data));
   }
 }
 

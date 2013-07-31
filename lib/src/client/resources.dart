@@ -1,9 +1,11 @@
-part of latitude_v1_api_client;
+part of latitude_v1_api;
 
-class CurrentLocationResource_ extends Resource {
+class CurrentLocationResource_ {
 
-  CurrentLocationResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  CurrentLocationResource_(Client client) :
+      _client = client;
 
   /**
    * Deletes the authenticated user's current location.
@@ -104,10 +106,12 @@ class CurrentLocationResource_ extends Resource {
   }
 }
 
-class LocationResource_ extends Resource {
+class LocationResource_ {
 
-  LocationResource_(Client client) : super(client) {
-  }
+  final Client _client;
+
+  LocationResource_(Client client) :
+      _client = client;
 
   /**
    * Deletes a location from the user's location history.
